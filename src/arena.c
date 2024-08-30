@@ -3,13 +3,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <stddef.h>
-
-typedef struct Arena Arena;
-struct Arena {
-  void *beg;
-  void *end;
-  ptrdiff_t cap;
-};
+#include "arena.h"
 
 Arena arena_create(ptrdiff_t size) {
   Arena out = {0};
